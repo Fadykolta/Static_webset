@@ -24,7 +24,7 @@ jobs:
         push: true
         tags: fadydevops/web
     - name: Run Container
-      uses: docker/metadata-action@v3.8.0
+      uses: docker/metadata-action@v4
       with:
         images: fadydevops/web
     - name: Publish to GitHub Pages
