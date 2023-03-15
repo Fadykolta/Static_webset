@@ -14,7 +14,7 @@ jobs:
       with:
         context: .
         push: false
-        tags: nginx
+        tags: website
     - name: Run Container
       uses: docker://nginx
       with:
