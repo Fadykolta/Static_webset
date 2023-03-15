@@ -1,4 +1,3 @@
----
 name: Build and Deploy
 on:
   push:
@@ -8,18 +7,23 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build and Deploy
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: false
-          tags: website
-      - name: Run Container
-        uses: docker://nginx
-        with:
-          ports:
-            - 8080:80
-          volumes:
-            - .:/usr/share/nginx/html:ro
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Build and Deploy
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: false
+        tags: your-image-tag
+    - name: Run Container
+      uses: docker://nginx
+      with:
+        ports:
+          - '8080:80'
+        volumes:
+          - name: nginx-cache
+            path: /var/cache/nginx
+          - name: nginx-log
+            path: /var/log/nginx
+          - name: html
+            path: /usr/share/nginx/html
