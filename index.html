@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Freddy - DevOps Engineer</title>
+	<style type="text/css">
+		
+		header {
+			background-color: rgb(50,50,50);
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+		nav {
+			background-color: #eee;
+			padding: 10px;
+			text-align: center;
+		}
+		nav a {
+			display: inline-block;
+			padding: 10px;
+			text-decoration: none;
+			color: #333;
+			font-weight: bold;
+		}
+		nav a:hover {
+			background-color: #333;
+			color: #fff;
+		}
+        #logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+        .stage-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .stage-buttons a {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .stage-buttons a:hover {
+            background-color: #555;
+        }
+        .color-picker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #eee;
+        }
+        .color-picker label {
+            display: inline-block;
+            margin: 10px;
+        }
+        .color-picker input {
+            margin: 0 5px;
+        }
+        #apply-color-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #apply-color-button:hover {
+            background-color: #555;
+        }
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>Freddy - DevOps Engineer</h1>
+	</header>
+    <img src="file:///Users/fadykolta/test/Static_website/imgs/DevSecOps.gif" alt="DevOps Logo" id="logo">
+	<nav>
+		<div class="stage-buttons">
+			<a href="#plan">Plan</a>
+			<a href="#code">Code</a>
+			<a href="#build">Build</a>
+			<a href="#test">Test</a>
+			<a href="#deploy">Deploy</a>
+			<a href="#operate">Operate</a>
+		</div>
+	</nav>
+    <div class="color-picker">
+        <label for="red">Red:</label>
+        <input type="range" min="0" max="255" value="50" id="red">
+        <label
